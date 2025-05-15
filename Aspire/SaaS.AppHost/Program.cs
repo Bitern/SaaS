@@ -14,11 +14,22 @@ var saasApi = builder.AddProject<Projects.SaaS_Api>("saas-api")
 var erpApi = builder.AddProject<Projects.ERP_Api>("erp-api")
     .WithReference(sharedDb);
 
-builder.AddProject<Projects.Frontend_Shell_Blazor>("webfrontend")
+var erpFrontend = builder.AddNpmApp("erp-frontend", "../../Frontend/Frontend.Modules.UI/erp-ui", "dev")
+    .WithHttpEndpoint(env: "VITE_PORT")
     .WithExternalHttpEndpoints()
     .WithReference(cache)
     .WaitFor(cache)
-    .WithReference(saasApi)
-    .WaitFor(saasApi);
+    .WithReference(erpApi);
+
+erpFrontend.WithEnvironment("ERP_URL", () => erpFrontend.GetEndpoint("http").Url);
+
+var saasFrontend = builder.AddNpmApp("saas-frontend", "../../Frontend/Frontend.Modules.UI/saas-ui", "dev")
+    .WithHttpEndpoint(env: "VITE_PORT")
+    .WithExternalHttpEndpoints()
+    .WithReference(cache)
+    .WaitFor(cache)
+    .WithReference(saasApi);
+
+saasFrontend.WithEnvironment("SAAS_URL", () => saasFrontend.GetEndpoint("http").Url);
 
 builder.Build().Run();

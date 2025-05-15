@@ -13,12 +13,14 @@
 
   <ItemGroup>
     <PackageReference Include="Aspire.Hosting.AppHost" />
+    <PackageReference Include="Aspire.Hosting.NodeJs" />
     <PackageReference Include="Aspire.Hosting.PostgreSQL" />
     <PackageReference Include="Aspire.Hosting.Redis" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Frontend\Frontend.Shell.Blazor\Frontend.Shell.Blazor.csproj" />
+    <ProjectReference Include="..\..\Frontend\Frontend.Modules.UI\erp-ui\erp-ui.esproj" />
+    <ProjectReference Include="..\..\Frontend\Frontend.Modules.UI\saas-ui\saas-ui.esproj" />
     <ProjectReference Include="..\..\Modules\ERP\ERP.Api\ERP.Api.csproj" />
     <ProjectReference Include="..\..\Modules\SaaS\SaaS.Api\SaaS.Api.csproj" />
   </ItemGroup>
