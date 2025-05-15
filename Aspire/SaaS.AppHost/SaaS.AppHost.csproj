@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <Sdk Name="Aspire.AppHost.Sdk" Version="9.0.0" />
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <IsAspireHost>true</IsAspireHost>
+    <UserSecretsId>815b2cc7-edb9-41f4-a17b-c7d0d2285c12</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Aspire.Hosting.AppHost" />
+    <PackageReference Include="Aspire.Hosting.PostgreSQL" />
+    <PackageReference Include="Aspire.Hosting.Redis" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Frontend\Frontend.Shell.Blazor\Frontend.Shell.Blazor.csproj" />
+    <ProjectReference Include="..\..\Modules\ERP\ERP.Api\ERP.Api.csproj" />
+    <ProjectReference Include="..\..\Modules\SaaS\SaaS.Api\SaaS.Api.csproj" />
+  </ItemGroup>
+
+</Project>
