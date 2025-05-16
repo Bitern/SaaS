@@ -4,10 +4,11 @@ using Infrastructure;
 using Infrastructure.Database;
 using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 using Microsoft.EntityFrameworkCore;
+using SaaS.Api.Extensions;
 using Serilog;
 using System.Reflection;
-using Web.Api;
-using Web.Api.Extensions;
+using SaaS.Api;
+using SaaS.Api.Extensions;
 
 WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 
