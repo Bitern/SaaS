@@ -1,6 +1,6 @@
 ﻿using SaaS.SharedKernel;
 
-namespace Web.Api.Infrastructure;
+namespace SaaS.Api.Infrastructure;
 
 public static class CustomResults
 {
