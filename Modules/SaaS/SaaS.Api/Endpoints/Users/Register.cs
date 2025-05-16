@@ -1,10 +1,10 @@
 ﻿using Application.Abstractions.Messaging;
 using SaaS.Application.Users.Register;
 using SaaS.SharedKernel;
-using Web.Api.Extensions;
-using Web.Api.Infrastructure;
+using SaaS.Api.Extensions;
+using SaaS.Api.Infrastructure;
 
-namespace Web.Api.Endpoints.Users;
+namespace SaaS.Api.Endpoints.Users;
 
 internal sealed class Register : IEndpoint
 {

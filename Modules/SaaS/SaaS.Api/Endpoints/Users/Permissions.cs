@@ -1,4 +1,4 @@
-﻿namespace Web.Api.Endpoints.Users;
+﻿namespace SaaS.Api.Endpoints.Users;
 
 internal static class Permissions
 {
