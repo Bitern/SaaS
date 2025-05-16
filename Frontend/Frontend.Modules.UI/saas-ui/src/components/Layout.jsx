@@ -9,9 +9,7 @@ export class Layout extends Component {
     }
 
     componentDidMount() {
-        setTimeout(() => {
-            this.setState({ isLoading: false });
-        }, 2000)
+        this.setState({ isLoading: false });
     }
 
     render() {
