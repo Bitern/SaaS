@@ -1,6 +1,6 @@
-﻿using Web.Api.Middleware;
+﻿using SaaS.Api.Middleware;
 
-namespace Web.Api.Extensions;
+namespace SaaS.Api.Extensions;
 
 public static class MiddlewareExtensions
 {

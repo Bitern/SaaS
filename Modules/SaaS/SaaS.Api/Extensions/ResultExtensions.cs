@@ -1,6 +1,6 @@
 ﻿using SaaS.SharedKernel;
 
-namespace Web.Api.Extensions;
+namespace SaaS.Api.Extensions;
 
 public static class ResultExtensions
 {
